@@ -1,4 +1,4 @@
-## tokio::sync::Mutex
+## `tokio::sync::Mutex`
 
 ```
 cargo run --no-default-features --features mutex-tokio
@@ -7,7 +7,7 @@ cargo run --no-default-features --features mutex-tokio
 tokio::sync::Mutex = 1379ms
 ```
 
-## futures::lock::Mutex
+## `futures::lock::Mutex`
 
 ```
 cargo run --no-default-features --features mutex-futures
@@ -16,7 +16,7 @@ cargo run --no-default-features --features mutex-futures
 futures::lock::Mutex = 857ms
 ```
 
-## async_std::sync::Mutex
+## `async_std::sync::Mutex`
 
 ```
 cargo run --no-default-features --features mutex-async-std
