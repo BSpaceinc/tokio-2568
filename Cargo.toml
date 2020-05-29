@@ -1,0 +1,17 @@
+[package]
+name = "tokio-2568"
+version = "0.1.0"
+authors = ["Flux Xu <fluxxu@gmail.com>"]
+edition = "2018"
+
+[features]
+default = ["mutex-tokio"]
+mutex-futures = []
+mutex-async-std = []
+mutex-tokio = []
+
+[dependencies]
+tokio = { version = "0.2", features = ["full"] }
+futures = "0.3"
+async-std = "1.6"
+async-trait = "0.1"
