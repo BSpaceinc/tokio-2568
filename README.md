@@ -3,7 +3,7 @@
 ```
 cargo run --no-default-features --features mutex-tokio
     Finished dev [unoptimized + debuginfo] target(s) in 1.55s
-     Running `target\debug\tokio-mutex-yield.exe`
+     Running `target\debug\tokio-2568.exe`
 tokio::sync::Mutex = 1379ms
 ```
 
@@ -12,7 +12,7 @@ tokio::sync::Mutex = 1379ms
 ```
 cargo run --no-default-features --features mutex-futures
     Finished dev [unoptimized + debuginfo] target(s) in 0.12s
-     Running `target\debug\tokio-mutex-yield.exe`
+     Running `target\debug\tokio-2568.exe`
 futures::lock::Mutex = 857ms
 ```
 
