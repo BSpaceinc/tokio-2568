@@ -69,6 +69,15 @@ where
     V: Clone,
     F: BatchFn<K, V>,
 {
+    #[cfg(feature = "mutex-futures-intrusive")]
+    pub fn with_cache(load_fn: F, cache: HashMap<K, V>) -> Loader<K, V, F> {
+        Loader {
+            state: Arc::new(Mutex::new(State::with_cache(cache), crate::mutex::IS_FAIR)),
+            load_fn: Arc::new(Mutex::new(load_fn, crate::mutex::IS_FAIR)),
+        }
+    }
+
+    #[cfg(not(feature = "mutex-futures-intrusive"))]
     pub fn with_cache(load_fn: F, cache: HashMap<K, V>) -> Loader<K, V, F> {
         Loader {
             state: Arc::new(Mutex::new(State::with_cache(cache))),
